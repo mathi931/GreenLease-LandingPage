@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>GreenLease</header>
+		<section>
+			<form>
+				<div class="fleet-details">
+					<label for="category">Wished Category:</label>
+					<select name="category">
+						<option value="volvo">Mini</option>
+						<option value="saab">Economy</option>
+						<option value="opel">Fullsize</option>
+					</select>
+					<label for="count">Fleet Size: </label>
+					<input type="number" name="count" min="1" max="200" required />
+				</div>
+				<div>
+					<label for="name">Company Name: </label>
+					<input type="text" name="name" required />
+				</div>
+
+				<div class="lease-period">
+					<label for="start">Lease starts: </label>
+					<input
+						class="input-date"
+						type="date"
+						name="lease-start"
+						value="2021-05-12"
+						min="2021-05-13"
+						max="2022-12-31"
+						required
+					/>
+					<label for="end">Lease ends: </label>
+					<input
+						class="input-date"
+						type="date"
+						name="lease-end"
+						value="2021-07-12"
+						min="2021-01-01"
+						max="2022-12-31"
+						required
+					/>
+				</div>
+				<div><button type="submit">Send Request</button></div>
+			</form>
+		</section>
+	</body>
+</html>
