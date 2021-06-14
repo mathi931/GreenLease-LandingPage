@@ -23,16 +23,19 @@ const TopSectionContainer = styled.div`
 `;
 
 const LeftContainer = styled.div`
+	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
 	${tw`
-    w-1/2
+	rounded-lg
+    w-2/3
     flex
     flex-col
+	p-2
   `};
 `;
 
 const RightContainer = styled.div`
 	${tw`
-    w-1/2
+    w-1/3
     flex
     flex-col
     relative
@@ -97,11 +100,11 @@ const BlobContainer = styled.div`
 		transform: rotate(-30deg);
 	}
 	@media (min-width: ${SCREENS.xl}) {
-		width: 45em;
-		max-height: 30em;
-		right: -10em;
-		top: -19em;
-		transform: rotate(-15deg);
+		width: 55em;
+		max-height: 35em;
+		right: -25em;
+		top: -24em;
+		transform: rotate(-1deg);
 	}
 `;
 

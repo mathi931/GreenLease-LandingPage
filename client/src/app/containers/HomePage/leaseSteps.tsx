@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Container = styled.div`
+	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
 	${tw`
       w-full
       flex
@@ -31,6 +32,7 @@ const Title = styled.h2`
 `;
 
 const StepsContainer = styled.div`
+
 	${tw`
       flex
       justify-evenly
