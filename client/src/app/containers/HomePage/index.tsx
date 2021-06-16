@@ -23,9 +23,9 @@ export function HomePage() {
 		<PageContainer>
 			<Navbar />
 			<TopSection />
-			<Marginer direction='vertical' margin='7em' />
+			<Marginer direction='vertical' margin='3em' />
 			<LeaseSteps />
-			<Marginer direction='vertical' margin='7em' />
+			<Marginer direction='vertical' margin='3em' />
 			<AboutUs />
 			<Marginer direction='vertical' margin='7em' />
 		</PageContainer>

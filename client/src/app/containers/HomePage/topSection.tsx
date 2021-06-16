@@ -9,7 +9,7 @@ import { Button } from '../../components/button';
 
 const TopSectionContainer = styled.div`
 	min-height: 400px;
-	margin-top: 6em;
+	margin-top: 8em;
 	${tw`
     w-full
     max-w-screen-2xl
@@ -23,7 +23,7 @@ const TopSectionContainer = styled.div`
 `;
 
 const LeftContainer = styled.div`
-	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
+	//box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
 	${tw`
 	rounded-lg
     w-2/3
@@ -79,7 +79,7 @@ const BlobContainer = styled.div`
 	position: absolute;
 	right: -10em;
 	top: -11em;
-	z-index: -1;
+	z-index: -2;
 	img {
 		width: 100%;
 		height: auto;
@@ -114,6 +114,7 @@ const StandaloneCar = styled.div`
 	right: -5em;
 	top: -6em;
 	position: absolute;
+	z-index: -1;
 	img {
 		width: auto;
 		height: 100%;

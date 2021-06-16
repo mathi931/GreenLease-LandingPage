@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import CarLogoImg from '../../../assets/images/car-logo.png';
 import CarLogo from '../../../assets/images/logoGreenLease.png';
 
 const LogoContainer = styled.div`

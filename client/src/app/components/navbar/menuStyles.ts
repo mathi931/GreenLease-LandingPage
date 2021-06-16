@@ -24,6 +24,7 @@ export default {
 		width: '100%',
 		height: '100%',
 		top: '0px',
+		
 	},
 	bmMenu: {
 		background: '#373a47',
@@ -38,7 +39,7 @@ export default {
 	},
 	bmItem: {
 		display: 'inline-block',
-		width: '100%'
+		width: '100%',
 	},
 	bmOverlay: {
 		background: 'rgba(0, 0, 0, 0.3)',

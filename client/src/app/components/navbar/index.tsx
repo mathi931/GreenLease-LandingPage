@@ -9,18 +9,20 @@ const OutherContainer = styled.div`
 	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
 	${tw`
         w-full
+        fixed
+        bg-gray-600
+        flex
+        flex-col
+        items-center
     `}
 `;
 const NavbarContainer = styled.div`
 	${tw`
-        w-full
         max-w-screen-2xl
-        flex
-        flex-row
-        items-center
+        bg-gray-200
+
         lg:pl-12
         lg:pr-12
-        justify-between
     `}
 `;
 
