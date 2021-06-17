@@ -8,6 +8,9 @@ const LogoContainer = styled.div`
         flex
         items-center
 		m-2
+		cursor-pointer
+		text-gray-100
+		hover:text-white
     `};
 `;
 const LogoText = styled.div`
@@ -15,7 +18,6 @@ const LogoText = styled.div`
         text-xl
         md:text-2xl
         font-bold
-        text-gray-800
     `}
 `;
 

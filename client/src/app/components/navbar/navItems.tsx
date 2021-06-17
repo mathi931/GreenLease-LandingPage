@@ -18,14 +18,13 @@ const NavItem = styled.li<{ menu?: any }>`
     text-sm
     ml-4
     md:text-base
-    text-gray-800
+    text-gray-100
     font-medium
     cursor-pointer
     transition
     duration-500
     ease-in-out
-    hover:text-gray-800
-    hover:bg-gray-400
+    hover:text-white
   `};
 	${({ menu }) =>
 		menu &&

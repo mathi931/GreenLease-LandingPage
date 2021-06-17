@@ -10,17 +10,21 @@ const OutherContainer = styled.div`
 	${tw`
         w-full
         fixed
-        bg-gray-600
         flex
         flex-col
         items-center
+		bg-gray-800
+		bg-opacity-40
     `}
 `;
 const NavbarContainer = styled.div`
 	${tw`
+		w-full
         max-w-screen-2xl
-        bg-gray-200
-
+        flex
+        flex-row
+		items-center
+		justify-between
         lg:pl-12
         lg:pr-12
     `}

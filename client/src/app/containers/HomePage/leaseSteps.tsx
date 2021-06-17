@@ -19,6 +19,8 @@ const Container = styled.div`
       pb-3
       lg:pt-6
       lg:pb-6
+	  bg-gray-800
+		bg-opacity-40
     `};
 `;
 
@@ -26,7 +28,7 @@ const Title = styled.h2`
 	${tw`
       text-3xl
       lg:text-5xl
-      text-gray-800
+      text-gray-100
       font-extrabold
     `};
 `;
@@ -60,6 +62,7 @@ const Step = styled.div`
       items-center
       justify-center
       p-6
+	  bg-gray-100
     `};
 `;
 

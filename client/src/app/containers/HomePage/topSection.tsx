@@ -154,8 +154,7 @@ export function TopSection() {
 					An electric car can be the future way for you, and for your company!
 				</Description>
 				<ButtonsContainer>
-					<Button text='Lease your dream' />
-					<Button theme='filled' text='Lease your fleet' />
+					<Button text='Our Complete Fleet' />
 				</ButtonsContainer>
 			</LeftContainer>
 
