@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 import { SCREENS } from '../../components/responsive';
 import Smart from '../../../assets/images/smart.png';
 
-const AboutUsContainer = styled.div`
+const Container = styled.div`
 	${tw`
     w-full
     flex
@@ -75,7 +75,7 @@ const InfoText = styled.p`
 
 export function AboutUs() {
 	return (
-		<AboutUsContainer>
+		<Container>
 			<ImageContainer>
 				<img src={Smart} />
 			</ImageContainer>
@@ -94,6 +94,6 @@ export function AboutUs() {
 					dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 				</InfoText>
 			</InfoContainer>
-		</AboutUsContainer>
+		</Container>
 	);
 }

@@ -8,7 +8,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import { SCREENS } from '../../components/responsive';
 import { useMediaQuery } from 'react-responsive';
 
-const MainContainer = styled.div`
+const Container = styled.div`
 	${tw`
         max-w-screen-lg
         w-full
@@ -21,14 +21,15 @@ const MainContainer = styled.div`
         md:pl-0
         md:pr-0
         mb-10
+        mt-10
     `}
 `;
 
 const Title = styled.h2`
 	${tw`
     text-3xl
-    lg:text-5xl
-    text-gray-700
+    lg:text-4xl
+    text-gray-800
     font-extrabold
   `};
 `;
@@ -43,6 +44,15 @@ const CategoriesContainer = styled.div`
         md:mt-10
 
 `}
+`;
+
+const Carousl = styled(Carousel)`
+	.BrainhubCarousel__arrows {
+		background-color: rgb(5, 150, 105);
+	}
+	.BrainhubCarousel__arrows:hover:enabled {
+		background-color: rgb(4, 120, 87);
+	}
 `;
 
 const mini: ICategory = {
@@ -90,32 +100,10 @@ export function Categories() {
 	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
 	return (
-		<MainContainer>
+		<Container>
 			<Title>Our Models</Title>
 			<CategoriesContainer>
-				{/* <Swiper
-					slidesPerView={3}
-					centeredSlides={true}
-					spaceBetween={30}
-					pagination={{
-						clickable: true,
-					}}
-					className='mySwiper'>
-					<SwiperSlide>
-						<Category {...mini} />
-					</SwiperSlide>
-					<SwiperSlide>
-						<Category {...economy} />
-					</SwiperSlide>
-					<SwiperSlide>
-						<Category {...fullSize} />
-					</SwiperSlide>
-					<SwiperSlide>
-						<Category {...premium} />
-					</SwiperSlide>
-				</Swiper> */}
-
-				<Carousel
+				<Carousl
 					value={selected}
 					onChange={setSelected}
 					slides={categories}
@@ -164,6 +152,6 @@ export function Categories() {
 					}
 				/>
 			</CategoriesContainer>
-		</MainContainer>
+		</Container>
 	);
 }

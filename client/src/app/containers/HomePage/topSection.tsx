@@ -7,7 +7,7 @@ import BlobImg from '../../../assets/images/blob.svg';
 import { SCREENS } from '../../components/responsive';
 import { Button } from '../../components/button';
 
-const TopSectionContainer = styled.div`
+const Container = styled.div`
 	min-height: 400px;
 	margin-top: 8em;
 	${tw`
@@ -147,7 +147,7 @@ const ButtonsContainer = styled.div`
 
 export function TopSection() {
 	return (
-		<TopSectionContainer>
+		<Container>
 			<LeftContainer>
 				<Slogan>Get with the future, Lease Green!</Slogan>
 				<Description>
@@ -166,6 +166,6 @@ export function TopSection() {
 					<img src={TeslaImg} />
 				</StandaloneCar>
 			</RightContainer>
-		</TopSectionContainer>
+		</Container>
 	);
 }

@@ -127,6 +127,7 @@ const HorizontalContainer = styled.div`
 	${tw`
     flex
     items-center
+    mb-2
   `};
 `;
 

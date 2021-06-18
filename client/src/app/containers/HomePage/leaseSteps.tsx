@@ -20,7 +20,8 @@ const Container = styled.div`
       lg:pt-6
       lg:pb-6
 	  bg-gray-800
-		bg-opacity-40
+	  bg-opacity-30
+	  mt-16
     `};
 `;
 
