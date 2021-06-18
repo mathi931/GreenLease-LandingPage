@@ -7,6 +7,7 @@ import { Marginer } from '../../components/marginer';
 import { LeaseSteps } from './leaseSteps';
 import { AboutUs } from './aboutUs';
 import { Footer } from '../../components/footer';
+import { Categories } from '../../containers/HomePage/categories';
 
 const PageContainer = styled.div`
 	${tw`
@@ -28,8 +29,10 @@ export function HomePage() {
 			<Marginer direction='vertical' margin='4em' />
 			<LeaseSteps />
 			<Marginer direction='vertical' margin='4m' />
+			<Categories />
+			<Marginer direction='vertical' margin='4m' />
 			<AboutUs />
-			<Marginer direction='vertical' margin='7em' />
+			<Marginer direction='vertical' margin='3em' />
 			<Footer />
 		</PageContainer>
 	);

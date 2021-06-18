@@ -6,7 +6,6 @@ import tw from 'twin.macro';
 import { Logo } from '../logo';
 
 const FooterContainer = styled.div`
-	//min-height: 24em;
 	background-color: #1d2124;
 	${tw`
     flex
@@ -173,16 +172,10 @@ export function Footer() {
 							<a href='#'>Home</a>
 						</ListItem>
 						<ListItem>
-							<a href='#'>About Us</a>
+							<a href='#'>Categories</a>
 						</ListItem>
 						<ListItem>
 							<a href='#'>Services</a>
-						</ListItem>
-						<ListItem>
-							<a href='#'>Models</a>
-						</ListItem>
-						<ListItem>
-							<a href='#'>Blog</a>
 						</ListItem>
 					</LinksList>
 				</SectionContainer>
