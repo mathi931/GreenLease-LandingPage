@@ -1,11 +1,26 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { ICategory } from '../../../typings/category';
 import { Category } from '../../components/category';
+import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination } from 'swiper/core';
+
+// install Swiper modules
+SwiperCore.use([Pagination]);
 
 const MainContainer = styled.div`
-	${`
+	${tw`
         max-w-screen-lg
         w-full
         flex
@@ -30,7 +45,7 @@ const Title = styled.h2`
 `;
 
 const CategoriesContainer = styled.div`
-	${`
+	${tw`
         w-full
         flex
         flex-wrap
@@ -75,14 +90,76 @@ const premium: ICategory = {
 };
 
 export function Categories() {
+	const [selected, setSelected] = useState(0);
+
 	return (
 		<MainContainer>
 			<Title>Our Models</Title>
 			<CategoriesContainer>
-				<Category {...mini} />
-				<Category {...economy} />
-				<Category {...fullSize} />
-				<Category {...premium} />
+				{/* <Swiper
+					slidesPerView={3}
+					centeredSlides={true}
+					spaceBetween={30}
+					pagination={{
+						clickable: true,
+					}}
+					className='mySwiper'>
+					<SwiperSlide>
+						<Category {...mini} />
+					</SwiperSlide>
+					<SwiperSlide>
+						<Category {...economy} />
+					</SwiperSlide>
+					<SwiperSlide>
+						<Category {...fullSize} />
+					</SwiperSlide>
+					<SwiperSlide>
+						<Category {...premium} />
+					</SwiperSlide>
+				</Swiper> */}
+				<Carousel
+					value={selected}
+					onChange={setSelected}
+					slides={[
+						<Category {...mini} />,
+						<Category {...economy} />,
+						<Category {...fullSize} />,
+						<Category {...premium} />,
+					]}
+					plugins={[
+						'arrows',
+						'clickToChange',
+						{
+							resolve: slidesToShowPlugin,
+							options: {
+								numberOfSlides: 3,
+							},
+						},
+					]}
+					breakpoints={{
+						640: {
+							plugins: [
+								{
+									resolve: slidesToShowPlugin,
+									options: {
+										numberOfSlides: 1,
+									},
+								},
+							],
+						},
+						900: {
+							plugins: [
+								{
+									resolve: slidesToShowPlugin,
+									options: {
+										numberOfSlides: 2,
+									},
+								},
+							],
+						},
+					}}
+				/>
+				<Dots value={selected} onChange={setSelected} number={2} />
 			</CategoriesContainer>
 		</MainContainer>
 	);

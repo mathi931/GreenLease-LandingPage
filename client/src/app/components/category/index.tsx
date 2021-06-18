@@ -13,11 +13,11 @@ import { Button } from '../button';
 interface ICategoryProps extends ICategory {}
 
 const CardContainer = styled.div`
-	width: 16.5em;
-	min-height: 23em;
+	width: 18em;
+	min-height: 21em;
 	max-height: 23em;
 	box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
-	${`
+	${tw`
         flex
     flex-col
     items-center
@@ -132,7 +132,10 @@ export function Category(props: ICategoryProps) {
 			</CardImage>
 			<CardTitle>{name}</CardTitle>
 			<RateContainer>
-				<MonthlyRate>{rate}</MonthlyRate>
+				<MonthlyRate>
+					{rate}
+					<SmText>/Month</SmText>
+				</MonthlyRate>
 			</RateContainer>
 			<Seperator />
 			<DetailsContainer>
