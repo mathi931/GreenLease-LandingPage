@@ -166,7 +166,7 @@ export function Footer() {
 				</AboutContainer>
 
 				<SectionContainer>
-					<HeaderTitle>Our Links</HeaderTitle>
+					<HeaderTitle>Green Lease</HeaderTitle>
 					<LinksList>
 						<ListItem>
 							<a href='#'>Home</a>
@@ -192,13 +192,13 @@ export function Footer() {
 						<Icon>
 							<FontAwesomeIcon icon={faEnvelope} />
 						</Icon>
-						<SmallText>info@yourcar.com</SmallText>
+						<SmallText>info@greenleasecars.com</SmallText>
 					</HorizontalContainer>
 				</SectionContainer>
 			</InnerContainer>
 			<BottomContainer>
 				<CopyrightText>
-					Copyright &copy; {new Date().getFullYear()} Yourcar. All rights
+					Copyright &copy; {new Date().getFullYear()} GreenLease. All rights
 					reserved.
 				</CopyrightText>
 			</BottomContainer>

@@ -5,19 +5,8 @@ import { ICategory } from '../../../typings/category';
 import { Category } from '../../components/category';
 import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-
-// import Swiper core and required modules
-import SwiperCore, { Pagination } from 'swiper/core';
-
-// install Swiper modules
-SwiperCore.use([Pagination]);
+import { SCREENS } from '../../components/responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const MainContainer = styled.div`
 	${tw`
@@ -39,7 +28,7 @@ const Title = styled.h2`
 	${tw`
     text-3xl
     lg:text-5xl
-    text-black
+    text-gray-700
     font-extrabold
   `};
 `;
@@ -88,9 +77,17 @@ const premium: ICategory = {
 	kmLimit: 1000,
 	additionalKmCost: 0.5,
 };
+const categories = [
+	<Category {...mini} />,
+	<Category {...economy} />,
+	<Category {...fullSize} />,
+	<Category {...premium} />,
+];
 
 export function Categories() {
 	const [selected, setSelected] = useState(0);
+
+	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
 	return (
 		<MainContainer>
@@ -117,15 +114,11 @@ export function Categories() {
 						<Category {...premium} />
 					</SwiperSlide>
 				</Swiper> */}
+
 				<Carousel
 					value={selected}
 					onChange={setSelected}
-					slides={[
-						<Category {...mini} />,
-						<Category {...economy} />,
-						<Category {...fullSize} />,
-						<Category {...premium} />,
-					]}
+					slides={categories}
 					plugins={[
 						'arrows',
 						'clickToChange',
@@ -159,7 +152,17 @@ export function Categories() {
 						},
 					}}
 				/>
-				<Dots value={selected} onChange={setSelected} number={2} />
+				<Dots
+					value={selected}
+					onChange={setSelected}
+					number={
+						isMobile
+							? categories.length
+							: categories.length % 3 === 0
+							? categories.length % 3
+							: (categories.length % 3) + 1
+					}
+				/>
 			</CategoriesContainer>
 		</MainContainer>
 	);
