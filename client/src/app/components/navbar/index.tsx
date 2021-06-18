@@ -4,17 +4,17 @@ import tw from 'twin.macro';
 import { Logo } from '../logo/index';
 import { NavItems } from '../navbar/navItems';
 
-const OutherContainer = styled.div`
+const Container = styled.div`
 	min-height: 68px;
 	box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.2);
 	${tw`
+		z-50
         w-full
         fixed
         flex
         flex-col
         items-center
 		bg-gray-800
-		bg-opacity-40
     `}
 `;
 const NavbarContainer = styled.div`
@@ -34,13 +34,13 @@ const LogoContainer = styled.div``;
 
 export function Navbar() {
 	return (
-		<OutherContainer>
+		<Container>
 			<NavbarContainer>
 				<LogoContainer>
 					<Logo />
 				</LogoContainer>
-				<NavItems></NavItems>
+				<NavItems />
 			</NavbarContainer>
-		</OutherContainer>
+		</Container>
 	);
 }

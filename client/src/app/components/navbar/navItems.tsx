@@ -15,16 +15,17 @@ const ListContainer = styled.ul`
 
 const NavItem = styled.li<{ menu?: any }>`
 	${tw`
+	p-5
     text-sm
-    ml-4
     md:text-base
-    text-gray-100
+    text-gray-300
     font-medium
     cursor-pointer
     transition
     duration-500
     ease-in-out
     hover:text-white
+	hover:bg-gray-700
   `};
 	${({ menu }) =>
 		menu &&

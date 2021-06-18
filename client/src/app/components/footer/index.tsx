@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import { Logo } from '../logo';
 
-const FooterContainer = styled.div`
-	background-color: #1d2124;
+const Container = styled.div`
 	${tw`
     flex
     flex-col
@@ -15,6 +14,7 @@ const FooterContainer = styled.div`
     md:pt-16
     items-center
     justify-center
+    bg-gray-800
   `};
 `;
 
@@ -155,7 +155,7 @@ const SmallText = styled.h6`
 
 export function Footer() {
 	return (
-		<FooterContainer>
+		<Container>
 			<InnerContainer>
 				<AboutContainer>
 					<Logo />
@@ -203,6 +203,6 @@ export function Footer() {
 					reserved.
 				</CopyrightText>
 			</BottomContainer>
-		</FooterContainer>
+		</Container>
 	);
 }

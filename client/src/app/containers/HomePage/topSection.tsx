@@ -43,7 +43,7 @@ const RightContainer = styled.div`
   `};
 `;
 
-const Slogan = styled.h1`
+const Title = styled.h1`
 	text-indent: 1em;
 	${tw`
     font-bold
@@ -149,7 +149,7 @@ export function TopSection() {
 	return (
 		<Container>
 			<LeftContainer>
-				<Slogan>Get with the future, Lease Green!</Slogan>
+				<Title>Get with the future, Lease Green!</Title>
 				<Description>
 					An electric car can be the future way for you, and for your company!
 				</Description>
