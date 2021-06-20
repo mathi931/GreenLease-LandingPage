@@ -29,8 +29,10 @@ app.get('/', (req, res) => {
 	getCategories().then((result) => res.json(result.recordsets));
 });
 
-app.post('/request', (req, res) => {
-	insertRequest().then((result) => res.json(result));
+app.post('/', (req, res) => {
+	let r = {...req.body}
+
+	insertRequest(r).then((result) => res.status(201).json(result));
 });
 
 app.listen(port, () => console.log(`Listening on port:${port}`));

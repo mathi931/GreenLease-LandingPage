@@ -29,10 +29,10 @@ const insertRequest = async (r) => {
 		let insertR = await pool
 			.request()
 			.input('company', sql.VarChar, r.company)
-			.input('totalCount', sql.Int, r.totalCoubt)
+			.input('totalCount', sql.Int, r.totalCount)
 			.input('statusID', sql.Int, r.statusID)
-			.query('INSERT');
-		//return insertR.recordsets;
+			.execute('addRequest');
+		return insertR.recordsets;
 	} catch (error) {
 		console.log(error);
 		sql.close;
