@@ -21,10 +21,6 @@ sql.on('error', (err) => {
 	console.log(err.message);
 });
 
-// app.get('/', (req, res) => {
-// 	getCategories().then((result) => res.json(result));
-// });
-
 app.get('/', (req, res) => {
 	getCategories().then((result) => res.json(result.recordsets));
 });
